@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/app/assets/SunDaoLogo.svg"
-import PrimaryButton from "./primarybtn";
+import Button from "./Button";
 
 export default function Navbar() {
   const links = [
@@ -10,9 +10,9 @@ export default function Navbar() {
     { name: "Help centre", href: "/help-centre" }
   ]
   return (
-    <nav className="px-20 py-5 flex items-center justify-between">
+    <nav className="px-20 py-8 flex items-center justify-between">
       <Link href="/">
-        <Image src={Logo} alt="Logo" className="w-60 h-24"/>
+        <Image src={Logo} alt="Logo" className="w-60 h-24" />
       </Link>
       <div className="flex gap-10">
         {links.map((link) => (
@@ -20,7 +20,7 @@ export default function Navbar() {
         ))}
       </div>
       <Link href="/">
-        <PrimaryButton variant={true}>Launch app</PrimaryButton>
+        <Button variant={true}>Launch app</Button>
       </Link>
     </nav>
   )

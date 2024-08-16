@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 export default function Home() {
   return (
     <main>
-      <div className="bg-[url('/HeroBgImg.svg')]">
+      <div className="bg-[url('/HeroBgImg.svg')] h-[894px]">
         <Navbar />
         <Hero />
       </div>
