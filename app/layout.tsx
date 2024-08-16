@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="font-poppins text-white bg-gradient-to-r from-[#0B0B0B] via-[#3D3D3D] to-[#717171]">
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }

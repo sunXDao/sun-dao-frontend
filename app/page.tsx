@@ -1,9 +1,13 @@
-import Image from "next/image";
+import Hero from "@/components/LandingPage/Hero";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
     <main>
-      Hello from Sun Dao
+      <div className="bg-[url('/HeroBgImg.svg')]">
+        <Navbar />
+        <Hero />
+      </div>
     </main>
   );
 }
