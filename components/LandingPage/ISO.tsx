@@ -6,7 +6,7 @@ import Image3 from "@/app/assets/Group 3.svg";
 export default function ISO() {
   return (
     <section className="my-20 p-20 text-center  bg-[url('/ISOBgImg.svg')] bg-center">
-      <h2 className="text-6xl font-semibold">
+      <h2 className="text-5xl font-semibold">
         Introducing Solar On - chain (ISO)
       </h2>
       <div className="w-10/12 mx-auto mt-24 mb-40 flex gap-8">
