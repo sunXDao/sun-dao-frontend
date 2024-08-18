@@ -11,6 +11,9 @@ const config: Config = {
       fontFamily:{
         poppins: ['Poppins',  'sans-serif']
       },
+      colors: {
+        primaryColor: '#00B894'
+      }
     },
   },
   plugins: [],

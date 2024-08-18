@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import FAQs from "@/components/LandingPage/FAQs";
 import Hero from "@/components/LandingPage/Hero";
 import ISO from "@/components/LandingPage/ISO";
+import Projects from "@/components/LandingPage/Projects";
 import RWA from "@/components/LandingPage/RWA";
 import Navbar from "@/components/Navbar";
 
@@ -13,8 +14,9 @@ export default function Home() {
         <Hero />
       </div>
       <RWA />
+      <Projects />
       <ISO />
-      <FAQs/>
+      <FAQs />
       <Footer />
     </main>
   );

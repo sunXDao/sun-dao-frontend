@@ -16,7 +16,7 @@ export default function Navbar() {
       </Link>
       <div className="flex gap-10">
         {links.map((link) => (
-          <Link key={link.name} href={link.href} className="font-semibold text-lg hover:text-[#00B894]">{link.name}</Link>
+          <Link key={link.name} href={link.href} className="font-semibold text-lg hover:text-primaryColor">{link.name}</Link>
         ))}
       </div>
       <Link href="/">
