@@ -19,7 +19,7 @@ export default function Navbar() {
           <Link key={link.name} href={link.href} className="font-semibold text-lg hover:text-primaryColor">{link.name}</Link>
         ))}
       </div>
-      <Link href="/">
+      <Link href="/app/swap">
         <Button variant={true}>Launch app</Button>
       </Link>
     </nav>

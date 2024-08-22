@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-poppins text-[#F5F5F5] bg-gradient-to-r from-[#0B0B0B] via-[#3D3D3D] to-[#717171]">
+      <body className="font-poppins text-[#F5F5F5] bg-gradient-to-r from-[#0B0B0B] via-secondaryColor to-[#717171]">
         <Toaster />
         {children}
       </body>

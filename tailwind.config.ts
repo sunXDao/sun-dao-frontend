@@ -12,7 +12,8 @@ const config: Config = {
         poppins: ['Poppins',  'sans-serif']
       },
       colors: {
-        primaryColor: '#00B894'
+        primaryColor: '#00B894',
+        secondaryColor: '#3D3D3D',
       }
     },
   },

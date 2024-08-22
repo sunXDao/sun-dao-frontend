@@ -3,6 +3,7 @@ import Button from "../Button";
 import Image1 from "@/app/assets/image 13.svg";
 import Image2 from "@/app/assets/image 14.svg";
 import Image3 from "@/app/assets/image 16.svg";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -17,7 +18,9 @@ export default function Hero() {
         <Image src={Image1} alt="crypto icon" className="absolute bottom-32 right-[600px] w-16 h-16" />
       </div>
       <div className="flex gap-40">
-        <Button variant={true}>Launch app</Button>
+        <Link href="/app/swap">
+          <Button variant={true}>Launch app</Button>
+        </Link>
         <Button variant={false}>Read Docs</Button>
       </div>
       <div>
