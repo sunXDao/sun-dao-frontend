@@ -11,7 +11,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-export default function SwapNavBar() {
+export default function AppNavBar() {
   const pathname = usePathname();
 
   return (
@@ -31,7 +31,7 @@ export default function SwapNavBar() {
       <NavLink to="/app/history" active={pathname === '/app/history'} text="History">
         <FaRegClock size={25} className="ml-2" />
       </NavLink>
-      <div className="bg-primaryColor h-0.5 -mx-6 mb-5">
+      <div className="bg-primaryColor h-[0.1px] -mx-6 mb-5">
       </div>
       <NavLink to="/app/faqs" active={pathname === '/app/faqs'} text="FAQs">
         <MdQuestionMark size={25} className="ml-2" />
