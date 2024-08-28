@@ -12,7 +12,7 @@ export default function Livecoinprice() {
     try {
       const response = await getCoinData()
       const eth = response.data.find((coin: any) => coin.symbol === 'ETH');
-      console.log(eth);
+      console.log(ethData?.quote?.USD?.price.toFixed(2));
       setEthData(eth);
     } catch (err) {
       console.error(err);
@@ -21,9 +21,9 @@ export default function Livecoinprice() {
 
   useEffect(() => {
     fetchPrice();
-    const intervalId = setInterval(fetchPrice, 10000); // Fetch every 30 seconds
+    const intervalId = setInterval(fetchPrice, 120000); 
 
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+    return () => clearInterval(intervalId); 
   }, []);
   return (
     <section className="flex gap-20 items-center">

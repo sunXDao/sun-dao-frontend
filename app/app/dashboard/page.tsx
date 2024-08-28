@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import Livecoinprice from "./Livecoinprice";
 
 export const metadata: Metadata = {
-  title: "My Dashobard | Sun Dao",
-  description: "My Dashobard",
+  title: "My Dashbaard | Sun Dao",
+  description: "My Dashboaard",
 };
 
 export default async function page() {
