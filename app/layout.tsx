@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
-import DiscordWidget from "@/components/DiscordWidget";
 
 export const metadata: Metadata = {
   title: "Sun Dao",
@@ -17,7 +16,6 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-poppins text-[#F5F5F5] bg-gradient-to-r from-[#0B0B0B] via-secondaryColor to-[#717171]">
         <Toaster />
-        {/* <DiscordWidget /> */}
         {children}
       </body>
     </html>
