@@ -7,7 +7,7 @@ export default function Navbar() {
   const links = [
     { name: "Home", href: "/" },
     { name: "Whitepaper", href: "/" },
-    { name: "Help centre", href: "/help-centre" }
+    { name: "Help centre", href: "/" }
   ]
   return (
     <nav className="px-20 py-8 flex items-center justify-between">
@@ -19,7 +19,7 @@ export default function Navbar() {
           <Link key={link.name} href={link.href} className="font-semibold text-lg hover:text-primaryColor">{link.name}</Link>
         ))}
       </div>
-      <Link href="/app/swap">
+      <Link href="/app/dashboard">
         <Button variant={true}>Launch app</Button>
       </Link>
     </nav>

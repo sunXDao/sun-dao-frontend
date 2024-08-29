@@ -18,7 +18,7 @@ export default function Hero() {
         <Image src={Image1} alt="crypto icon" className="absolute bottom-32 right-[600px] w-16 h-16" />
       </div>
       <div className="flex gap-40">
-        <Link href="/app/swap">
+        <Link href="/app/dashboard">
           <Button variant={true}>Launch app</Button>
         </Link>
         <Button variant={false}>Read Docs</Button>
