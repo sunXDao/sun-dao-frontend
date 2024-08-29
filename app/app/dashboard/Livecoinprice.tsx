@@ -21,14 +21,22 @@ export default function Livecoinprice() {
 
   useEffect(() => {
     fetchPrice();
-    const intervalId = setInterval(fetchPrice, 120000); 
+    const intervalId = setInterval(fetchPrice, 180000);
 
-    return () => clearInterval(intervalId); 
+    return () => clearInterval(intervalId);
   }, []);
   return (
     <section className="flex gap-20 items-center">
       <TokenInfo tokenPrice={0.01467} tokenProgress="gain" tokenProgressPercentage={0.53} tokenSymbol="SVL" />
-      <TokenInfo tokenPrice={ethData?.quote?.USD?.price.toFixed(2)} tokenProgress="loss" tokenProgressPercentage={ethData?.quote?.USD?.percent_change_24h.toFixed(2)} tokenSymbol={ethData?.symbol} />
+      {
+        ethData ?
+          <TokenInfo
+            tokenPrice={ethData?.quote?.USD?.price.toFixed(2)}
+            tokenProgress="loss"
+            tokenProgressPercentage={ethData?.quote?.USD?.percent_change_24h.toFixed(2)}
+            tokenSymbol={ethData?.symbol}
+          /> : <p>Loading...</p>
+      }
     </section>
   )
 }
