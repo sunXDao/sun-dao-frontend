@@ -4,7 +4,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Image from 'next/image';
 import Metamask from '@/app/assets/token-branded_metamask.svg';
 
-export const ConnectBtn = () => {
+export const ConnectBtn = ({ fill }: { fill: boolean }) => {
   return (
     <ConnectButton.Custom>
       {({
@@ -39,8 +39,8 @@ export const ConnectBtn = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <button onClick={openConnectModal} type="button" className='bg-primaryColor px-6 py-3 rounded-lg font-bold text-lg flex items-center gap-4'>
-                    <Image src={Metamask} alt="Metamask" className="w-8 h-8" width={100} height={100}/>
+                  <button onClick={openConnectModal} type="button" className={`${fill ? "bg-primaryColor" : "border border-primaryColor"} px-6 py-3 rounded-lg font-bold text-lg flex items-center gap-4`}>
+                    <Image src={Metamask} alt="Metamask" className="w-8 h-8" width={100} height={100} />
                     <p>
                       Connect Wallet
                     </p>

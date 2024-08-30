@@ -8,7 +8,7 @@ export default function AppNavHeader() {
         <span className="text-primaryColor font-semibold">$87,236.01</span>
       </h1>
       <div className="flex gap-5">
-        <ConnectBtn />
+        <ConnectBtn fill={true} />
       </div>
     </div>
   )
