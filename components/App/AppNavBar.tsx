@@ -18,16 +18,16 @@ export default function AppNavBar() {
         <Image src={Logo} alt="Logo" className="-ml-6" />
       </Link>
       <div className="my-14 flex flex-col h-96 justify-between">
-        <NavLink to="/app/dashboard" active={pathname === '/app/dashboard'} text="Dashboard">
+        <NavLink to="/app/dashboard/home" active={pathname === '/app/dashboard/home'} text="Dashboard">
           <LuLayoutDashboard size={25} className="ml-2" />
         </NavLink>
-        <NavLink to="/app/project" active={pathname === '/app/project'} text="Project">
+        <NavLink to="/app/dashboard/project" active={pathname === '/app/dashboard/project'} text="Project">
           <AiOutlineFundProjectionScreen size={25} className="ml-2" />
         </NavLink>
       </div>
       <div className="bg-primaryColor h-[0.1px] -mx-6 mb-10">
       </div>
-      <NavLink to="/app/faqs" active={pathname === '/app/faqs'} text="FAQs">
+      <NavLink to="/app/dashboard/faqs" active={pathname === '/app/dashboard/faqs'} text="FAQs">
         <MdQuestionMark size={25} className="ml-2" />
       </NavLink>
     </nav>
