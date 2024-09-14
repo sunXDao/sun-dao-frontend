@@ -52,19 +52,18 @@ export default function SwapSection() {
     setIsSwaping(true)
     try {
       const approveRes = await handleApprove();
-      if (approveRes) {
-        const result = await writeContractAsync({
-          address: contractAddress,
-          abi: contractABI,
-          functionName: "depositToMint",
-          args: [parseEther(fromTokenAmount)],
-        })
-        if (result) {
-          toast.success("Deposit successful")
-          setIsSwaping(false)
-          setFromTokenAmount('')
-        }
+      const result = await writeContractAsync({
+        address: contractAddress,
+        abi: contractABI,
+        functionName: "depositToMint",
+        args: [parseEther(fromTokenAmount)],
+      })
+      if (result) {
+        toast.success("Deposit successful")
+        setIsSwaping(false)
+        setFromTokenAmount('')
       }
+
     } catch (error) {
       toast.error("Deposit failed")
       setIsSwaping(false)
