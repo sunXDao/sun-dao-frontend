@@ -3,8 +3,21 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Image from 'next/image';
 import Metamask from '@/app/assets/token-branded_metamask.svg';
+import { useAccount, useReadContract } from 'wagmi';
+import { contractABI, contractAddress } from '@/utils/contract-details';
+import { formatEther } from 'viem'
 
 export const ConnectBtn = ({ fill }: { fill: boolean }) => {
+  const { address } = useAccount()
+  const result = useReadContract({
+    address: contractAddress,
+    abi: contractABI,
+    functionName: 'balanceOf',
+    args: [address],
+  })
+  const data: bigint | any = result?.data || "0";
+  const balance = formatEther(data)
+
   return (
     <ConnectButton.Custom>
       {({
@@ -82,7 +95,7 @@ export const ConnectBtn = ({ fill }: { fill: boolean }) => {
                   <button onClick={openAccountModal} type="button" className='mr-3'>
                     {account.displayName}
                     {account.displayBalance
-                      ? ` (${account.displayBalance})`
+                      ? ` (${account.displayBalance} | ${result ? balance : '0'} SND)`
                       : ''}
                   </button>
                 </div>

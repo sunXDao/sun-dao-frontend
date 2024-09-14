@@ -27,7 +27,7 @@ export default function Livecoinprice() {
   }, []);
   return (
     <section className="flex gap-20 items-center">
-      <TokenInfo tokenPrice={0.01467} tokenProgressPercentage={0.53} tokenSymbol="SVL" />
+      <TokenInfo tokenPrice={0.01467} tokenProgressPercentage={0.53} tokenSymbol="SND" />
       {/* <TokenInfo tokenPrice={0.01467} tokenProgressPercentage={0.53} tokenSymbol="SVL" /> */}
       {
         ethData ?
