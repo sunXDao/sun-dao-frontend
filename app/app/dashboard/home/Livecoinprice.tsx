@@ -10,10 +10,9 @@ export default function Livecoinprice() {
 
   const fetchPrice = async () => {
     try {
-      const response = await getCoinData()
-      const eth = response.data.find((coin: any) => coin.symbol === 'ETH');
-      console.log(ethData?.quote?.USD?.price.toFixed(2));
-      setEthData(eth);
+      const response = await getCoinData();
+      const tokenData = response.data[8519];
+      setEthData(tokenData);
     } catch (err) {
       console.error(err);
     }
